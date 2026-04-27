@@ -13,13 +13,13 @@
     "tailwind",
     "shadcn"
   ],
-  "homepage": "https://github.com/kopplin-co/web-design",
+  "homepage": "https://github.com/kopplin-co/claude-web-design-skill",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kopplin-co/web-design.git"
+    "url": "git+https://github.com/kopplin-co/claude-web-design-skill.git"
   },
   "bugs": {
-    "url": "https://github.com/kopplin-co/web-design/issues"
+    "url": "https://github.com/kopplin-co/claude-web-design-skill/issues"
   },
   "author": "Kopplin Co. <hello@kopplin.co>",
   "license": "MIT",
