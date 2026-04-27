@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * CLI for @kopplin-co/claude-web-design-skill.
+ * CLI for @kopplin-co/web-design.
  *
  * Default behavior on `npm install` is to run `install` via postinstall,
- * which copies SKILL.md into ~/.claude/skills/claude-web-design-skill/SKILL.md.
+ * which copies SKILL.md into ~/.claude/skills/web-design/SKILL.md.
  *
  * Manual usage:
- *   claude-web-design-skill install      # (re)install the skill
- *   claude-web-design-skill uninstall    # remove the skill
- *   claude-web-design-skill where        # print the install path
- *   claude-web-design-skill --help
+ *   web-design install      # (re)install the skill
+ *   web-design uninstall    # remove the skill
+ *   web-design where        # print the install path
+ *   web-design --help
  */
 
 "use strict";
@@ -18,7 +18,7 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 
-const SKILL_NAME = "claude-web-design-skill";
+const SKILL_NAME = "web-design";
 const PKG_ROOT = path.resolve(__dirname, "..");
 const SKILL_SRC = path.join(PKG_ROOT, "SKILL.md");
 const SKILLS_DIR = path.join(os.homedir(), ".claude", "skills");
@@ -46,7 +46,7 @@ function err(msg) {
 
 function ensureSourceExists() {
   if (!fs.existsSync(SKILL_SRC)) {
-    err(`[claude-web-design-skill] Cannot find SKILL.md at ${SKILL_SRC}`);
+    err(`[web-design] Cannot find SKILL.md at ${SKILL_SRC}`);
     process.exit(1);
   }
 }
@@ -72,13 +72,13 @@ function install() {
     fs.mkdirSync(TARGET_DIR, { recursive: true });
     fs.copyFileSync(SKILL_SRC, TARGET_FILE);
   } catch (e) {
-    err(`[claude-web-design-skill] Failed to install skill: ${e.message}`);
+    err(`[web-design] Failed to install skill: ${e.message}`);
     if (!isPostinstall) process.exit(1);
     return;
   }
 
   if (isPostinstall) {
-    info(`[claude-web-design-skill] Installed skill to ${TARGET_FILE}`);
+    info(`[web-design] Installed skill to ${TARGET_FILE}`);
   } else {
     info(`Installed Claude skill: ${SKILL_NAME}`);
     info(`  -> ${TARGET_FILE}`);
@@ -88,14 +88,14 @@ function install() {
 
 function uninstall() {
   if (!fs.existsSync(TARGET_DIR)) {
-    log(`[claude-web-design-skill] Nothing to uninstall (${TARGET_DIR} not found).`);
+    log(`[web-design] Nothing to uninstall (${TARGET_DIR} not found).`);
     return;
   }
   try {
     fs.rmSync(TARGET_DIR, { recursive: true, force: true });
-    log(`[claude-web-design-skill] Removed ${TARGET_DIR}`);
+    log(`[web-design] Removed ${TARGET_DIR}`);
   } catch (e) {
-    err(`[claude-web-design-skill] Failed to uninstall: ${e.message}`);
+    err(`[web-design] Failed to uninstall: ${e.message}`);
     process.exit(1);
   }
 }
@@ -105,13 +105,13 @@ function where() {
 }
 
 function help() {
-  info(`@kopplin-co/claude-web-design-skill — Claude Code skill installer
+  info(`@kopplin-co/web-design — Claude Code skill installer
 
 Usage:
-  claude-web-design-skill install      (default; runs automatically on npm install)
-  claude-web-design-skill uninstall    Remove ~/.claude/skills/${SKILL_NAME}
-  claude-web-design-skill where        Print the install path
-  claude-web-design-skill --help
+  web-design install      (default; runs automatically on npm install)
+  web-design uninstall    Remove ~/.claude/skills/${SKILL_NAME}
+  web-design where        Print the install path
+  web-design --help
 
 Install path: ${TARGET_FILE}
 `);

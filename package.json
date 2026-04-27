@@ -1,5 +1,5 @@
 {
-  "name": "@kopplin-co/claude-web-design-skill",
+  "name": "@kopplin-co/web-design",
   "version": "0.1.0",
   "description": "Claude Code skill for web design. Visual design guidance for marketing websites and web UIs (Next.js + Tailwind + shadcn/ui).",
   "keywords": [
@@ -13,18 +13,18 @@
     "tailwind",
     "shadcn"
   ],
-  "homepage": "https://github.com/kopplin-co/claude-web-design-skill",
+  "homepage": "https://github.com/kopplin-co/web-design",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kopplin-co/claude-web-design-skill.git"
+    "url": "git+https://github.com/kopplin-co/web-design.git"
   },
   "bugs": {
-    "url": "https://github.com/kopplin-co/claude-web-design-skill/issues"
+    "url": "https://github.com/kopplin-co/web-design/issues"
   },
   "author": "Kopplin Co. <hello@kopplin.co>",
   "license": "MIT",
   "bin": {
-    "claude-web-design-skill": "bin/cli.js"
+    "web-design": "bin/cli.js"
   },
   "scripts": {
     "postinstall": "node bin/cli.js install --postinstall",
