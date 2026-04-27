@@ -1,4 +1,4 @@
-# @kopplin-co/web-design
+# @kopplin-co/claude-web-design-skill
 
 A [Claude Code](https://claude.com/claude-code) skill that gives Claude opinionated visual design guidance for marketing websites and web UIs. Defaults to a Next.js + Tailwind + shadcn/ui stack.
 
@@ -13,13 +13,13 @@ When this skill is installed, Claude will activate it automatically on requests 
 ## Install
 
 ```bash
-npm install @kopplin-co/web-design
+npm install @kopplin-co/claude-web-design-skill
 ```
 
 That's it. The package's `postinstall` script copies `SKILL.md` into:
 
 ```
-~/.claude/skills/web-design/SKILL.md
+~/.claude/skills/claude-web-design-skill/SKILL.md
 ```
 
 Claude Code reads that directory at startup, so restart Claude Code (or open a new session) for it to pick up the new skill.
@@ -27,38 +27,38 @@ Claude Code reads that directory at startup, so restart Claude Code (or open a n
 ### Global install
 
 ```bash
-npm install -g @kopplin-co/web-design
+npm install -g @kopplin-co/claude-web-design-skill
 ```
 
-A global install also installs the `claude-skill-web-design` CLI on your PATH.
+A global install also installs the `claude-web-design-skill` CLI on your PATH.
 
 ## CLI
 
 After install, you can re-run the installer or remove the skill manually:
 
 ```bash
-claude-skill-web-design install      # (re)copy SKILL.md into ~/.claude/skills/web-design
-claude-skill-web-design uninstall    # remove ~/.claude/skills/web-design
-claude-skill-web-design where        # print the install path
-claude-skill-web-design --help
+claude-web-design-skill install      # (re)copy SKILL.md into ~/.claude/skills/claude-web-design-skill
+claude-web-design-skill uninstall    # remove ~/.claude/skills/claude-web-design-skill
+claude-web-design-skill where        # print the install path
+claude-web-design-skill --help
 ```
 
 If you only did a local (non-global) install, run the CLI with `npx`:
 
 ```bash
-npx claude-skill-web-design uninstall
+npx claude-web-design-skill uninstall
 ```
 
 ## Uninstall
 
 ```bash
-npm uninstall @kopplin-co/web-design
+npm uninstall @kopplin-co/claude-web-design-skill
 ```
 
-The package's `preuninstall` script removes `~/.claude/skills/web-design/`. If for any reason that step is skipped, run:
+The package's `preuninstall` script removes `~/.claude/skills/claude-web-design-skill/`. If for any reason that step is skipped, run:
 
 ```bash
-npx claude-skill-web-design uninstall
+npx claude-web-design-skill uninstall
 ```
 
 or delete the directory by hand.

@@ -1,5 +1,5 @@
 ---
-name: web-design
+name: claude-web-design-skill
 description: Visual design guidance for marketing websites and web UIs. Use when the user says "design", "redesign", "design review", "make it look better", "polish the UI", "design a hero section", "design system", "color palette", "typography", "visual hierarchy", "spacing", "design critique", or asks for opinions on layout, color, or aesthetics. Defaults to a Next.js + Tailwind + shadcn/ui stack.
 license: MIT
 metadata:
