@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * CLI for @kopplin-co/web-design.
+ * CLI for @kopplin-co/claude-web-design-skill.
  *
  * Default behavior on `npm install` is to run `install` via postinstall,
  * which copies SKILL.md into ~/.claude/skills/web-design/SKILL.md.
@@ -105,7 +105,7 @@ function where() {
 }
 
 function help() {
-  info(`@kopplin-co/web-design — Claude Code skill installer
+  info(`@kopplin-co/claude-web-design-skill — Claude Code skill installer
 
 Usage:
   web-design install      (default; runs automatically on npm install)

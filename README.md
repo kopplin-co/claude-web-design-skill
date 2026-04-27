@@ -1,4 +1,4 @@
-# @kopplin-co/web-design
+# @kopplin-co/claude-web-design-skill
 
 A [Claude Code](https://claude.com/claude-code) skill that gives Claude opinionated visual design guidance for marketing websites and web UIs. Defaults to a Next.js + Tailwind + shadcn/ui stack.
 
@@ -13,7 +13,7 @@ When this skill is installed, Claude will activate it automatically on requests 
 ## Install
 
 ```bash
-npm install @kopplin-co/web-design
+npm install @kopplin-co/claude-web-design-skill
 ```
 
 That's it. The package's `postinstall` script copies `SKILL.md` into:
@@ -27,7 +27,7 @@ Claude Code reads that directory at startup, so restart Claude Code (or open a n
 ### Global install
 
 ```bash
-npm install -g @kopplin-co/web-design
+npm install -g @kopplin-co/claude-web-design-skill
 ```
 
 A global install also installs the `web-design` CLI on your PATH.
@@ -52,7 +52,7 @@ npx web-design uninstall
 ## Uninstall
 
 ```bash
-npm uninstall @kopplin-co/web-design
+npm uninstall @kopplin-co/claude-web-design-skill
 ```
 
 The package's `preuninstall` script removes `~/.claude/skills/web-design/`. If for any reason that step is skipped, run:
