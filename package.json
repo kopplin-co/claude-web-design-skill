@@ -1,7 +1,7 @@
 {
   "name": "@kopplin-co/claude-web-design-skill",
-  "version": "0.1.0",
-  "description": "Claude Code skill for web design. Visual design guidance for marketing websites and web UIs (Next.js + Tailwind + shadcn/ui).",
+  "version": "0.2.0",
+  "description": "Claude Code skill for web design. Teaches Claude to design marketing sites that look expensive: a solid system, a signature moment, and motion with purpose (Next.js + Tailwind).",
   "keywords": [
     "claude",
     "claude-code",
@@ -11,7 +11,7 @@
     "ui",
     "ux",
     "tailwind",
-    "shadcn"
+    "nextjs"
   ],
   "homepage": "https://github.com/kopplin-co/claude-web-design-skill",
   "repository": {

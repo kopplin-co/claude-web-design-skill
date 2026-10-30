@@ -1,6 +1,6 @@
 # @kopplin-co/claude-web-design-skill
 
-A [Claude Code](https://claude.com/claude-code) skill that gives Claude opinionated visual design guidance for marketing websites and web UIs. Defaults to a Next.js + Tailwind + shadcn/ui stack.
+A [Claude Code](https://claude.com/claude-code) skill that gives Claude opinionated visual design guidance for marketing websites and web UIs. Defaults to a Next.js + Tailwind stack, with no component library required.
 
 When this skill is installed, Claude will activate it automatically on requests like:
 
@@ -9,6 +9,7 @@ When this skill is installed, Claude will activate it automatically on requests 
 - "make this look better"
 - "what colors should I use?"
 - "polish the UI"
+- "make it pop"
 
 ## Install
 
@@ -67,16 +68,20 @@ or delete the directory by hand.
 
 `SKILL.md` covers:
 
-- Design system defaults (typography, color, spacing, radii, shadows)
-- Layout patterns (heroes, sections, grids)
-- Component design (buttons, forms, navigation, cards)
+- The Mood Dial: picking temperature, energy, voice, and surface on purpose
+- Design system defaults (typography, OKLCH color tokens, spacing, radii, shadows, texture)
+- The signature moment: one memorable, value-proving element per page
+- Layout patterns (heroes, bento grids of live mini-demos, steps, final CTA)
+- Components in plain Tailwind and semantic HTML (buttons, nav, FAQ, tabs, code windows, forms)
+- CSS-first motion with reduced-motion fallbacks
+- Copy voice, and a ban list of generic AI phrasing
 - Responsive design
 - Accessibility (WCAG AA floor)
-- Modern aesthetic conventions and what's dated
+- What reads dated, what reads generic, and what reads premium
 - A 10-point design review checklist
 - An opinionated process for designing from scratch
 
-It is tuned for Tailwind tokens and shadcn/ui's CSS variable convention, but the principles transfer to any stack.
+It is tuned for Tailwind v4 and CSS variable tokens, but the principles transfer to any stack.
 
 ## How Claude Code skills work
 
